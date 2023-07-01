@@ -1,0 +1,27 @@
+.nav-container{
+    background-color: #212121;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.card:hover{
+    box-shadow: 0px 8px 15px;
+    transition: 0.1s ease-out;
+}
+
+.item-container {
+    max-height: 70px ;
+    
+}
+
+.item-container ul span{
+    transition: all 0.5s ease;
+
+
+}  
+.item-container ul span:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}

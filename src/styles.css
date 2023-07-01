@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.zoom-img{
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.zoom-img:hover{
+transform: scale(1.1);
+}
+
+.card{
+    align-items: center;
+    text-align: center;
+    width: 350px;
+    box-shadow: 1px 2px 6px 0px black;
+    height: 440px;
+}
+.card-body{
+    width: 350px;
+}
+
+.card-img-top{
+    width: 180px;
+    height: 200px;
+}

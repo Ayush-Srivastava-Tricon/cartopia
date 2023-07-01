@@ -1,0 +1,43 @@
+<div class="nav-container p-3 text-light">
+  <nav class="d-flex flex-row align-items-center justify-content-around mx-5 flex-wrap" style="gap: 10px;">
+    <div class="logo" routerLink="/"> <span class="display-4"> <span class="text-light">Carto</span> <span
+          class="text-warning">Pia</span></span> </div>
+    <div class="input-group" style="width: 37% !important;">
+      <span (click)="searchProducts()" class="input-group-text rounded-0" id="basic-addon1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart"
+          viewBox="0 0 16 16">
+          <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"></path>
+          <path
+            d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z">
+          </path>
+        </svg>
+      </span>
+      <input type="text" class="form-control rounded-0" placeholder="Search Products and More"
+        aria-label="Input group example" [(ngModel)]="searchProduct" >
+    </div>
+    <div> <button class="btn btn-danger btn-sm px-5 rounded-0">Login</button> </div>
+    <div class="d-flex">
+      <div class="fs-6 me-3 d-flex align-items-start flex-wrap" style="gap: 10px;">
+       <img src="/assets/heart.svg" width="20" alt="" style="filter: invert(1); cursor: pointer;">
+        Wishlist
+      </div>
+      <div class="fs-6 me-3 d-flex align-items-start flex-wrap" style="gap: 10px;">
+       <img src="/assets/bag.svg" width="20" alt="" style="filter: invert(1);cursor: pointer;">
+        Cart
+      </div>
+      <div class="fs-6 d-flex align-items-start flex-wrap" style="gap: 10px;">
+       <img src="/assets/profile.svg" width="20" alt="" style="filter: invert(1);cursor: pointer;">
+        Profile
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- List Items -->
+<div class="item-container mt-2 shadow-sm p-3 mb-5 bg-white rounded">
+  <ul class="d-flex justify-content-around flex-wrap  mx-5" style="gap: 10px;">
+    <ng-container *ngFor="let item of categoryList">
+    <span class="fs-5" (click)="showProduct(item)">{{item|uppercase}}</span> 
+    </ng-container>
+  </ul>
+</div>
+<!-- prducct-cards -->
