@@ -15,15 +15,22 @@ transform: scale(1.1);
 .card{
     align-items: center;
     text-align: center;
-    width: 350px;
+    width: 18rem;
     box-shadow: 1px 2px 6px 0px black;
     height: 440px;
 }
 .card-body{
-    width: 350px;
+    width: 320px;
+    padding: 35px;
 }
 
 .card-img-top{
     width: 180px;
     height: 200px;
+}
+
+.card-btn{
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
 }

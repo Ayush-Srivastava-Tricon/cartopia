@@ -1,8 +1,8 @@
 <div class="nav-container p-3 text-light">
-  <nav class="d-flex flex-row align-items-center justify-content-around mx-5 flex-wrap" style="gap: 10px;">
+  <nav class="d-flex " style="gap: 10px;">
     <div class="logo" routerLink="/"> <span class="display-4"> <span class="text-light">Carto</span> <span
           class="text-warning">Pia</span></span> </div>
-    <div class="input-group" style="width: 37% !important;">
+    <div class="input-group">
       <span (click)="searchProducts()" class="input-group-text rounded-0" id="basic-addon1">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart"
           viewBox="0 0 16 16">
@@ -34,9 +34,9 @@
 </div>
 <!-- List Items -->
 <div class="item-container mt-2 shadow-sm p-3 mb-5 bg-white rounded">
-  <ul class="d-flex justify-content-around flex-wrap  mx-5" style="gap: 10px;">
+  <ul class="d-flex justify-content-around flex-wrap" style="gap: 10px;">
     <ng-container *ngFor="let item of categoryList">
-    <span class="fs-5" (click)="showProduct(item)">{{item|uppercase}}</span> 
+    <span class="cat-items" (click)="showProduct(item)">{{item|uppercase}}</span> 
     </ng-container>
   </ul>
 </div>

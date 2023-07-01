@@ -25,3 +25,23 @@
     cursor: pointer;
     transform: scale(1.1);
 }
+
+.input-group{
+    width:37%;
+}
+nav{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px 10px;
+    flex-wrap: wrap;
+}
+
+@media (max-width:768px) {
+        .input-group{
+            width: 100%;
+        }
+        .cat-items{
+            font-size: 14px;
+        }
+}
