@@ -6,35 +6,21 @@
   <div class="row justify-content-start px-4 ">
     <div class="col-sm-3  h-75" *ngFor="let item of products">
        <ng-container >
-        <div class="card mb-5 bg-white rounded">
+        <div class="card-product mb-5 bg-white rounded">
           <img [src]="item.image" (click)="showSingleProduct(item.id)" class="zoom-img card-img-top p-3" width="150" height="200" alt="https://images.unsplash.com/flagged/photo-1587302164675-820fe61bbd55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80">
-          <div class="card-body">
+          <div class="card-body-product">
             <h5 class="card-title text-truncate">{{item.title}}</h5>
             <p class="card-text text-truncate">{{item.description}}</p>
             <strong class="card-text">${{item.price}}</strong>
-            <div class="card-btn mt-3 d-block w-100">
-              <a href="javascript:void(0);" class="btn btn-sm btn-warning">Add to Cart</a>
-              <a href="javascript:void(0);" class="btn btn-sm btn-danger mx-3">Buy Now</a>
-            </div>
+          </div>
+          <div class="card-btn-product mt-3 d-block w-100">
+            <a href="javascript:void(0);" class="btn btn-sm btn-warning" (click)="addToCart(item)">Add to Cart</a>
+            <a href="javascript:void(0);" class="btn btn-sm btn-danger mx-3">Buy Now</a>
           </div>
         </div>
       </ng-container>
     </div>
   </div>
-    <!-- <div class="d-flex justify-content-evenly align-items-center flex-wrap mb-3" style="gap:20px;">
-      <ng-container *ngFor="let item of products">
-        <div class="card" style="width: 18rem;">
-          <img [src]="item.image" class="card-img-top" alt="https://images.unsplash.com/flagged/photo-1587302164675-820fe61bbd55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80">
-          <div class="card-body">
-            <h5 class="card-title">{{item.title}}</h5>
-            <p class="card-text">{{item.description}}</p>
-            <p class="card-text">{{item.price}}</p>
-            <a href="javascript:void(0);" class="btn btn-success">Add to Cart</a>
-            <a href="javascript:void(0);" class="btn btn-primary mx-1">Buy Now</a>
-          </div>
-        </div>
-      </ng-container>
-    </div> -->
   </div>
 
 

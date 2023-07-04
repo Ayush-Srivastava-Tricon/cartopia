@@ -12,17 +12,17 @@
                 <ng-container *ngFor="let item of singleCateogry">
 
                 <div class="col-sm-6 "> 
-                    <div class="card p-3 mb-5">
+                    <div class="card-product p-3 mb-5">
                         <img class="zoom-img card-img-top p-4" [src]="item.image" width="150" height="200" alt="Card image cap">
                         <div class="card-body">
                           <h6 class="card-title text-truncate">{{item.title}}</h6>
                           <h6 class="card-title">{{item.category}}</h6>
                           <p class="card-text text-truncate">{{item.description}}</p>
                           <p class="card-text">${{item.price}}</p>
-                          <div class="card-btn mt-3 d-block w-100">
-                            <a href="javascript:void(0);" class="btn btn-sm btn-warning">Add to Cart</a>
-                            <a href="javascript:void(0);" class="btn btn-sm btn-danger mx-3">Buy Now</a>
-                          </div>
+                        </div>
+                        <div class="card-btn mt-5 d-block w-100">
+                          <a href="javascript:void(0);" class="btn btn-sm btn-warning">Add to Cart</a>
+                          <a href="javascript:void(0);" class="btn btn-sm btn-danger mx-3">Buy Now</a>
                         </div>
                       </div>
                 </div>

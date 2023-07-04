@@ -16,18 +16,18 @@
         aria-label="Input group example" [(ngModel)]="searchProduct" >
     </div>
     <div> <button class="btn btn-danger btn-sm px-5 rounded-0">Login</button> </div>
-    <div class="d-flex">
-      <div class="fs-6 me-3 d-flex align-items-start flex-wrap" style="gap: 10px;">
-       <img src="/assets/heart.svg" width="20" alt="" style="filter: invert(1); cursor: pointer;">
-        Wishlist
+    <div class="d-flex nav-item-links">
+      <div class="fs-6 me-3 d-flex align-items-start flex-wrap" style="gap: 10px;cursor: pointer;">
+       <img src="/assets/heart.svg" width="20" alt="" style="filter: invert(1); ">
+       <a href="javascript:void(0);" routerLink="/wishlist">Wishlist</a>
       </div>
-      <div class="fs-6 me-3 d-flex align-items-start flex-wrap" style="gap: 10px;">
-       <img src="/assets/bag.svg" width="20" alt="" style="filter: invert(1);cursor: pointer;">
-        Cart
+      <div class="fs-6 me-3 d-flex align-items-start flex-wrap" style="gap: 10px;cursor: pointer;">
+       <img src="/assets/bag.svg" width="20" alt="" style="filter: invert(1);">
+       <a href="javascript:void(0);" routerLink="/cart">Cart</a>
       </div>
-      <div class="fs-6 d-flex align-items-start flex-wrap" style="gap: 10px;">
-       <img src="/assets/profile.svg" width="20" alt="" style="filter: invert(1);cursor: pointer;">
-        Profile
+      <div class="fs-6 d-flex align-items-start flex-wrap" style="gap: 10px;cursor: pointer;">
+       <img src="/assets/profile.svg" width="20" alt="" style="filter: invert(1);">
+       <a href="javascript:void(0);" routerLink="/profile">Profile</a>
       </div>
     </div>
   </nav>

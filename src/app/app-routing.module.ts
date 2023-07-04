@@ -17,7 +17,20 @@ const routes: Routes = [
   {
     path:'single-category/:name',
     loadChildren:()=>import("./single-category/single-category.module").then(m=>m.SingleCategoryModule)
-  }
+  },
+  {
+    path:'cart',
+    loadChildren:()=>import("./component/cart/cart.module").then(m=>m.CartModule)
+  },
+  {
+    path:'wishlist',
+    loadChildren:()=>import("./component/wishlist/wishlist.module").then(m=>m.WishlistModule)
+  },
+  {
+    path:'profile',
+    loadChildren:()=>import("./component/profile/profile.module").then(m=>m.ProfileModule)
+  },
+
 ];
 
 @NgModule({
