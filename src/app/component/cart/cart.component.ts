@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertService } from 'src/app/shared/alert.service';
 import { ProductService } from 'src/app/shared/product.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class CartComponent {
   cartList:any=[];
   hasCartItem:boolean=false;
 
-  constructor(private _prodService:ProductService){}
+  constructor(private _prodService:ProductService,private alertService:AlertService){}
 
   ngOnInit(){
     this._prodService.fetchCartProduct((res:any)=>{
@@ -36,7 +37,11 @@ export class CartComponent {
         }
     })
     localStorage.setItem("cartList",JSON.stringify(this.cartList));
-    this.checkCartHasItem(this.cartList)
+    this.checkCartHasItem(this.cartList);
+    setTimeout(()=>{
+      this.hasCartItem ?  '' :  scrollTo(0,0);
+    },0)
+    this.alertService.alert("error","Item Deleted From the Cart", "Success", {displayDuration: 1000, pos: 'top'})
     
   }
 

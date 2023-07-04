@@ -7,44 +7,6 @@
             <div class="display-1">You Have Not Added Any Item!</div>
         </div>
     </div>
-    <!-- <div class="container-fluid" *ngIf="cartList">
-
-    <div class="row responsive" >
-        <div class="p-4">
-        <table class="table table-responsive table-hover table-bordered">
-            <thead class="text-center">
-              <tr>
-                <th scope="col">Item</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr  *ngFor="let item of cartList" class="col-sm-12">
-                <td class="p-3 w-25"> <img [src]="item.image" class="me-2"  width="30" height="30" alt="Image"> <span class="text-truncate">{{item.title}}</span> </td>
-                <td class="p-3">${{item.price}}</td>
-                <td class="p-3">{{item.quantity}}</td>
-                <td class="p-3">${{item.quantity*item.price}}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-    </div>
-    <div class="row total-section">
-        <div class="col-sm-4 p-3 m-3 border">
-            <div class="sub-total d-flex justify-content-between">
-                <p class="h6">Subtotal:</p>
-                <p class="h6">$320</p>
-            </div>
-            <hr>
-            <div class="total d-flex justify-content-between">
-                <p class="h6">Grand-Total:</p>
-                <p class="h6">$560</p>
-            </div>
-        </div>
-    </div>
-</div> -->
 <section  *ngIf="hasCartItem" style="background-color: whitesmoke;">
     <div class="container-fluid py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -74,20 +36,20 @@
                       </div>
                       <div class="col-md-3 col-lg-3 col-xl-2 d-flex align-items-baseline">
                         <button class="btn minus-item px-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                        (click)="item.quantity = item.quantity-1;" [disabled]="item.quantity==1">
                        <strong>-</strong>
                         </button>
   
-                        <input id="form1" min="0" name="quantity" [value]="item.quantity" type="number"
+                        <input id="form1" min="1" name="quantity" [value]="item.quantity" type="number"
                           class="form-control mb-4 text-center form-control-sm" disabled />
   
                         <button class="btn plus-item px-2"
-                          onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                        (click)="item.quantity = item.quantity+1;">
                           <strong>+</strong>
                         </button>
                       </div>
                       <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1 mb-3 text-center">
-                        <h6 class="mb-0">${{item.price}}</h6>
+                        <h6 class="mb-0">${{item.quantity*item.price}}</h6>
                       </div>
                       <div class="col-md-1 col-lg-1 col-xl-1 text-center">
                         <a href="javascript:void(0);" class="text-muted" (click)="deleteItem(item.id)"><img class="delete-img" src="../../../assets/delete.svg"></a>

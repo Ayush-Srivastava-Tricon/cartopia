@@ -2,6 +2,13 @@
     justify-content: end;
 }
 
+.btn:disabled{
+    cursor: pointer !important; 
+    pointer-events: visible !important;
+    border: none !important;
+    background-color: white !important;
+}
+
 @media (max-width:768px) {
     .total-section{
         justify-content: center;
