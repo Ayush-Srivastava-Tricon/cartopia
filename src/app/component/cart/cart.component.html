@@ -62,34 +62,34 @@
 
                     <hr class="my-4" >
   
-                    <div class="row mb-4 d-flex justify-content-between align-items-center">
-                      <div class="col-md-2 col-lg-2 col-xl-2">
+                    <div class="row mb-4 d-flex justify-content-between align-items-baseline">
+                      <div class="col-md-2 col-lg-2 col-xl-2 text-center">
                         <img
                           [src]="item.image"
                           class="img-fluid rounded-3" alt="Cotton T-shirt">
                       </div>
-                      <div class="col-md-3 col-lg-3 col-xl-3">
-                        <h6 class="text-muted text-uppercase">{{item.category}}</h6>
-                        <h6 class="text-black mb-0">{{item.title}}</h6>
+                      <div class="col-md-3 col-lg-3 col-xl-3 text-center">
+                        <h6 class="text-muted text-uppercase my-4">{{item.category}}</h6>
+                        <h6 class="text-black mb-4">{{item.title}}</h6>
                       </div>
-                      <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                      <div class="col-md-3 col-lg-3 col-xl-2 d-flex align-items-baseline">
                         <button class="btn minus-item px-2"
                           onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                        <strong>-</strong>
                         </button>
   
                         <input id="form1" min="0" name="quantity" [value]="item.quantity" type="number"
-                          class="form-control text-center form-control-sm" disabled />
+                          class="form-control mb-4 text-center form-control-sm" disabled />
   
                         <button class="btn plus-item px-2"
                           onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                           <strong>+</strong>
                         </button>
                       </div>
-                      <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                      <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1 mb-3 text-center">
                         <h6 class="mb-0">${{item.price}}</h6>
                       </div>
-                      <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                      <div class="col-md-1 col-lg-1 col-xl-1 text-center">
                         <a href="javascript:void(0);" class="text-muted" (click)="deleteItem(item.id)"><img class="delete-img" src="../../../assets/delete.svg"></a>
                       </div>
                     </div>
