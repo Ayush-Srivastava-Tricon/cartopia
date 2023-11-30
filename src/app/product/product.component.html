@@ -9,7 +9,7 @@
         <div class="card-product mb-5 bg-white">
           <img [src]="item.image" (click)="showSingleProduct(item.id)" class="zoom-img card-img-top p-3" width="150" height="200" alt="https://images.unsplash.com/flagged/photo-1587302164675-820fe61bbd55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80">
           <div class="card-body-product">
-            <h5 class="card-title text-truncate">{{item.title}}</h5>
+            <h5 class="card-title text-truncate">{{item.title|uppercase}}</h5>
             <p class="card-text text-truncate">{{item.description}}</p>
             <strong class="card-text">${{item.price}}</strong>
           </div>
