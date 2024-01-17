@@ -8,12 +8,12 @@
                 <div *ngIf="loader" class="spinner-border text-danger" style="width: 3rem; height: 3rem;" role="status">
               </div>
             </div>
-            <div class="row justify-content-around">
+            <div class="row justify-content-start">
                 <ng-container *ngFor="let item of singleCateogry">
 
-                <div class="col-sm-6 "> 
+                <div class="col-sm-6 " style="width: 33% !important;"> 
                     <div class="card-product p-3 mb-5">
-                        <img class="zoom-img card-img-top p-4" [src]="item.image" width="150" height="200" alt="Card image cap">
+                        <img class="zoom-img card-img-top p-4" [src]="item.image" loading="lazy" width="150" height="200" alt="Card image cap">
                         <div class="card-body">
                           <h6 class="card-title text-truncate">{{item.title}}</h6>
                           <h6 class="card-title">{{item.category}}</h6>
@@ -21,7 +21,7 @@
                           <p class="card-text">${{item.price}}</p>
                         </div>
                         <div class="card-btn mt-5 d-block w-100">
-                          <a href="javascript:void(0);" class="btn btn-sm btn-warning">Add to Cart</a>
+                          <a href="javascript:void(0);" class="btn btn-sm btn-warning" (click)="addToCart(item)">Add to Cart</a>
                           <a href="javascript:void(0);" class="btn btn-sm btn-danger mx-3">Buy Now</a>
                         </div>
                       </div>

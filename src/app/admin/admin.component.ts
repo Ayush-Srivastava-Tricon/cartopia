@@ -1,6 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonService } from '../shared/common.service';
 import { AlertService } from '../shared/alert.service';
+import { Observable } from 'rxjs';
+
+
+export class FileUpload {
+  key!: string;
+  name!: string;
+  url!: string;
+  file!: File;
+}
 
 @Component({
   selector: 'app-admin',
@@ -14,8 +23,11 @@ export class AdminComponent {
   imageSrc:any;
   addProductConfig:any={};
   imageFormData:any = new FormData();
+  downloadURL: any|Observable<string>;
+  fb:any;
 
-  constructor(private service:CommonService,private alert:AlertService){}
+  constructor(private service:CommonService,private alert:AlertService){
+  }
 
   ngOnInit(){
     this.productName ='Fashion';
@@ -79,6 +91,10 @@ export class AdminComponent {
         console.log(res);
       }
     })
+  }
+
+  selectProdImg(event:any){
+    
   }
 
 }

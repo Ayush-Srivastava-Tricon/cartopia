@@ -6,13 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarModule } from './navbar/navbar.module';
 import { FooterComponent } from './footer/footer.component';
-import {AngularFireModule} from "@angular/fire/compat";
 import { environment } from 'src/environment/environment';
-import {
-  AngularFireStorageModule,
-  AngularFireStorageReference,
-  AngularFireUploadTask,
-} from "@angular/fire/compat/storage";
+
 
 @NgModule({
   declarations: [
@@ -24,9 +19,6 @@ import {
     AppRoutingModule,
     BrowserAnimationsModule,
     NavbarModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireStorageModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
